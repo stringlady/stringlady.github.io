@@ -1,67 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Interview</title>
-    <style>
-      * {
-        font-family: monospace;
-        background-color: #fff48b;
-      }
-      strong {
-        font-size: 16px;
-        text-align: center;
-        color: black;
-      }
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      p {
-        font-size: 16px;
-        color: black;
-        }
-      h1 {
-        text-align: center;
-        color: black;
-      }
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
+		<title>My Portfolio</title>
 
-      li {
-        float: left;
-      }
+		<div class="header">
+			<a href="#intro">About Me</a>
+			<a href="#projects"> My Projects</a>
+			<a href="https://drive.google.com/file/d/1l7YOnaKL_XcoWbanbt8OW8Op-ND9PnTJ/view?usp=sharing" target="_blank"> Resume</a>
+			<a href="#experience"> Experience</a>
 
-      li a {
-        display: block;
-        color: firebrick;
-        text-align: center;
-        padding: 20px 20px;
-        text-decoration: none;
-      }
+		</div>
+		<style>
 
-      /* Change the link color to #111 (black) on hover */
-      li a:hover {
-        background-color: #111;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <ul>
-      <li><a href= "Website(Part1).html">Home</a></li>
-      <li><a href= "Website(Part2).html">Violin</a></li>
-      <li><a href= "Website(Part3).html">Programming</a></li>
-      <li><a href= "https://github.com/stringlady">Github</a></li>
-    </ul>
-    <h1>All About Anaya Bussey</h1>
-    <p style="text-align: center"><img  src="https://pbs.twimg.com/profile_images/639502696110780416/crhNpGTY.jpg" width="300" height="300"></p>
-    <p>I am an 8th grader at The Stony Brook School in Long Island, NY. My favorite subjects are Math and Science. I love to read and my all time favorite book is The Chronicles of Narnia by CS Lewis. I began playing the violin at age 7. My favorite classical piece is Moonlight Sonata by Beethoven. In the summer of 2014 I began coding and I got "bitten by the coding bug" and I love creating my own projects and attended Hackathons and joining others who love to code.</p>
-  <p>
-    I can be reached at: <br><a href="mailto:anayabussey@gmail.com">anayabussey@gmail.com</a><br> Tweet Me: <a href="https://twitter.com/Anayabuss?lang=en" target="_top">@Anayabuss</a> 
-    
-    </p>
-  </body>
+			@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+			.header {
+				background: brown;
+				margin-top: 1px;
+				overflow: hidden;
+				padding-top: 10px;
+				text-align: center;
+				position: fixed;
+  				top: 0;
+  				width: 100%;
+  				z-index: 999;
+
+			}
+
+
+			.header a {
+				float: left;
+  				display: block;
+  				color: black;
+  				text-align: center;
+  				padding: 14px 16px;
+  				text-decoration: none;
+  				font-size: 17px;
+  				font-weight: bold;
+			}
+
+			.header a:hover {
+  				opacity: 0.4;
+			}
+
+			a:hover {
+				opacity: 0.4;
+				text-decoration: none;
+			}
+
+			body {
+				background-color: sandybrown;
+				background-repeat: no-repeat;
+				background-attachment: fixed; 
+				background-position: 50% 0; 
+  				background-size: cover;
+  				margin: 0;
+  				line-height: 2;
+			}
+
+			h3 {
+				text-align: center;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				font-family: fantasy;
+				font-size:  50px;
+			}
+
+			.image {
+				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+  				padding-top: 150px;
+  				width: 15%;
+			}
+
+
+			ul {
+				position: relative;
+        		list-style-type: none;
+        		margin: 5px;
+        		padding: ;
+        		overflow: hidden;
+      		}
+
+      		p {
+      			text-align: center;
+      			font-family: fantasy;
+      			font-size: 20px;
+      			padding-top: 20px;
+      		}
+
+      		#all {
+      			position: relative;
+      			text-align: center;
+      		}
+
+			#linkedin {
+				padding: 20px;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+  				top: 0;
+  				transition: top ease 0.5s;
+			}
+
+			#linkedin:hover {
+				top:  -10px;
+			}
+
+			#github {
+				padding: 20px;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+  				top: 0;
+  				transition: top ease 0.5s;
+			}
+
+			#github:hover {
+				top:  -10px;
+			}
+
+			#lang {
+				vertical-align: top;
+  				text-align: center;
+  				float: center;
+  				display: block;
+			}
+
+			#skill {
+				vertical-align: top;
+				text-align: center;
+			}
+
+			#orb {
+				font-family: sans-serif;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				text-align: center;
+				float: left;
+				padding-top: 30px;
+				padding-left: 80px;
+				white-space: nowrap;
+
+			}
+
+			#math {
+				font-family: sans-serif;
+				display: inline-block;
+				vertical-align: top;
+				position: relative
+				text-align: center;
+				float: left;
+				padding-top: 30px;
+				padding-left: 200px;
+				white-space: nowrap;
+
+			}
+
+			#maze {
+				font-family: sans-serif;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				text-align: center;
+				float: left;
+				padding-top: 30px;
+				padding-left: 130px;
+				white-space: nowrap;
+
+			}
+
+			#bee {
+				font-family: sans-serif;
+				display: block;
+				vertical-align: top;
+				position: relative;
+				text-align: center;
+				float: left;
+				padding-top: 100px;
+				padding-left: 80px;
+				padding-right: 80px;
+				padding-bottom: 40px;
+				white-space: nowrap;
+
+			}
+
+			#qt {
+				font-family: sans-serif;
+				display: block;
+				vertical-align: top;
+				position: relative;
+				text-align: center;
+				float: left;
+				padding-top: 100px;
+				padding-left: 30px;
+				padding-bottom: 40px;
+				white-space: nowrap;
+
+			}
+
+			#web {
+				font-family: sans-serif;
+				display: block;
+				vertical-align: top;
+				position: relative;
+				text-align: center;
+				float: left;
+				padding-top: 100px;
+				padding-left: 30px;
+				white-space: nowrap;
+
+			}
+
+			#make {
+				text-align: center;
+				font-family: sans-serif;
+			}
+
+			.accordion {
+  				width: 800px;
+  				color: black;
+  				background-color: white;
+  				padding: 45px 45px;
+			}
+
+			.accordion .container {
+  				position: relative;
+  				margin-right: 600px;
+			}
+
+			.accordion .label {
+  				position: relative;
+  				padding: 10px 0;
+  				font-size: 30px;
+  				color: black;
+  				cursor: pointer;
+			}
+
+			.accordion .label::before {
+  				content: '+';
+  				color: black;
+  				position: absolute;
+  				top: 50%;
+  				right: -5px;
+  				font-size: 30px;
+  				transform: translateY(-50%);
+			}
+
+			.accordion .content {
+  				position: relative;
+  				background: white;
+  				height: 0;
+  				font-size: 20px;
+  				text-align: justify;
+  				width: 780px;
+  				overflow: hidden;
+  				transition: 0.5s;
+			}
+
+			.accordion hr {
+ 				width: 100;
+  				margin-left: 0;
+  				border: 1px solid grey;
+			}
+
+			.accordion .container.active .content {
+  				height: 150px;
+			}
+
+			.accordion .container.active .label::before {
+  				content: '-';
+  				font-size: 30px;
+			}
+
+
+</style>
+		
+	</head>
+	<body>
+		<section id="intro">
+			<img class="image" src="https://lh3.googleusercontent.com/AxNQIuXVMFhBSpIWapdMgxZfpmHrb6_jyITbjtFywdU2ILo7lnGcctk7hY7LYOvTKSOomLSiU5k3cMtcMpC3ZcsEpqvBvuwWBrXpYY0wxpKNouzeNKNVN9UdJnPhcpjLtpYdpBcNmQ=w2400"/>
+			<h3>Anaya Bussey</h3>
+			<p>Hello There, my name is Anaya. I am currently a Sophmore at Northeastern University </br> studying Computer Science at the Khoury School for Computer Sciences. </br> </br> My curiosity for technology began when I was 11 years old after enrolling in a </br> Black Girls Code Hackathon  in the summer of 2014. That event sparked my passion for Web development </br> and Software Engineering.  During those introductory years not having access to formal training, </br> led me to navigate programming on my own.  Being self-taught has allowed me to learn how to think </br> critically to find the most efficient way to solve problem. I am a forward thinker that </br>  aspires to improve our world through technology. </p>
+		</br>
+			<div id="lang">
+				<a style= "font-weight: bold;">Coding Languages: </a></br> 
+				<a>Java, Python, HTML, CSS, JavaScript, Swift, Scheme/Racket</a>
+				
+			</div>
+			<div id="skill">
+				<a style= "font-weight: bold;">Skills: </a>
+			</br>
+					<a> G-Suite, MS-Office, Git, Sublime,</br> Atom, Eclipse, XCode, DrRacket</a>
+			</div>
+		</section>
+
+		<section id="projects">
+
+		</br>
+		</br>
+
+		<!--
+			<h3 style= "font-weight: bold; font-family: sans-serif;">My Projects</h3>
+			<div id= "orb">
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+
+				<img src="https://lh3.googleusercontent.com/lg_QQMUyu-5fE4dOPyKnSAM_JKCwHBwuO9f8vgRT1b1Ibfp2wGDhKacbWT1KcQR9KElM7iI4MBl2UuWoYsqP-kv0JZMKf3H8HKyG1DLa8wsc6s5dALiGxwcpnD_SawKgvcehxrKjWg=w2400" height="200" width="200">
+				<p style="text-align: left;font-family: sans-serif;font-size: 15px; ">Orb of Power is an IOS game designed using </br> the Programming Language Swift and </br> the Software XCode. The game is a level </br>based game in where you need to make </br>it to  the end of the level by collecting orbs </br>to move from water to land. </br><a style="color: black;" href="https://github.com/stringlady/OrbOfPower" target="_blank"> Project Link</a></p>
+			</div>
+
+			<div id= "math">
+
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+
+				<img style="margin-left: 40px;"src="https://lh3.googleusercontent.com/TZ1RnX_XkXsNgPtha2l86_by1u1EF5C-2A_S3m1MVq0A2jFOWdESV0eBX7eKxJYyQNlg0wRaFjlFpQotVAgTHYShWDlwclMWUfnNN6GEsZ0KNkI0WHxWxJiVie2Lprdy2e8kFBFlwg=w2400" height="200" width="200">
+				<p style="text-align: center;font-family: sans-serif;font-size: 15px;">Math Flash Cards is a Web Game used to </br> test your skills in  Addition, Subtraction, </br> and Multiplication. This game was made </br>using  HTML, CSS, and JavaScript </br> using the software Atom. </br> <a style="color: black;" href="https://github.com/stringlady/nano_hw/tree/master/week%205" target="_blank"> Project Link</a></p>
+			</div>
+
+			<img src="https://lh3.googleusercontent.com/Ka0i7Nnoyt9my6mQ3VgDyYLkL5dU7pACSt3pVZtC1lUeXXO6Uj7eTEee88uk_DOVCrYjmtj7huJp4i9MJ85GNOPemnQR6BLzfkZx5ssfMwPrCiqmaXv42ZUH8cGy0nBKg4Bo3g71rQ=w2400" height="200" width="200">
+
+			<button class="accordian">Maze</button>
+			<div class= "panel">
+				
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+				
+				<p style="text-align: right;font-family: sans-serif;font-size: 15px;">Maze is a game that solves a  maze using a Breadth First Search algorithm or a Depth First Search algorthm.  The game was made using the language Java and the software Eclipse. <a style="color: black;" href="https://github.com/stringlady/Maze" target="_blank"> Project Link</a></p>
+			</div>
+		-->
+
+			<div class="accordian-body">
+				<div class="accordian">
+					<h3 style= "font-weight: bold; font-family: sans-serif;">My Projects</h3>
+				</br>
+					<hr>
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Orb of Power</div>
+						<div class="content"><img src="https://lh3.googleusercontent.com/lg_QQMUyu-5fE4dOPyKnSAM_JKCwHBwuO9f8vgRT1b1Ibfp2wGDhKacbWT1KcQR9KElM7iI4MBl2UuWoYsqP-kv0JZMKf3H8HKyG1DLa8wsc6s5dALiGxwcpnD_SawKgvcehxrKjWg=w2400" height="200" width="200">
+
+						</br> Orb of Power is an IOS game designed using the Programming Language Swift and the Software XCode. </br>The game is a level based game in where you need to make it to  the end of the level by collecting orbs to </br>move from water to land. </br> <a style="color: black;" href="https://github.com/stringlady/OrbOfPower" target="_blank"> Project Link</a></div>
+					</div>
+<hr>
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Math Flash Cards</div>
+						<div class="content"><img src="https://lh3.googleusercontent.com/TZ1RnX_XkXsNgPtha2l86_by1u1EF5C-2A_S3m1MVq0A2jFOWdESV0eBX7eKxJYyQNlg0wRaFjlFpQotVAgTHYShWDlwclMWUfnNN6GEsZ0KNkI0WHxWxJiVie2Lprdy2e8kFBFlwg=w2400" height="200" width="200">
+
+						</br> Math Flash Cards is a Web Game used to test your skills in  Addition, Subtraction, and Multiplication.</br> This game was made using  HTML, CSS, and JavaScript using the software Atom. </br> <a style="color: black;" href="https://github.com/stringlady/nano_hw/tree/master/week%205" target="_blank"> Project Link</a></div>
+					</div>
+					<hr>
+
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Maze</div>
+						<div class="content"><img src="https://lh3.googleusercontent.com/Ka0i7Nnoyt9my6mQ3VgDyYLkL5dU7pACSt3pVZtC1lUeXXO6Uj7eTEee88uk_DOVCrYjmtj7huJp4i9MJ85GNOPemnQR6BLzfkZx5ssfMwPrCiqmaXv42ZUH8cGy0nBKg4Bo3g71rQ=w2400" height="200" width="200">
+
+						</br> Maze is a game that solves a  maze using a Breadth First Search algorithm or a Depth First Search algorthm. </br>The game was made using the language Java and the software Eclipse. </br><a style="color: black;" href="https://github.com/stringlady/Maze" target="_blank"> Project Link</a></div>
+					</div>
+					<hr>
+
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Quantum Telportation</div>
+						<div class="content"><img src="https://lh3.googleusercontent.com/oI1R3wyJUZOhvMNYT04mszPWyQfQK7YGADKURN0zjxWkqI8034mFKdnpB1P_PRk3pV4jVyiR-1VffOCeA8tabE3mhMimhBtG9mCOR8Yod4Io--RQUThUN8zDkfzsiSboMQSC9xScWQ=w2400" height="200" width="300">
+
+						</br> Quantum Teleportation is a Jupyter Notebook used to help teleport qubits using the Quantum and Classical Registers.</br>This project was made using Python and the library Qiskit.</br> <a style="color: black;" href="hhttps://github.com/stringlady/Quantum-Teleportation" target="_blank"> Project Link</a></div>
+					</div>
+					<hr>
+
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Spelling Bee</div>
+						<div class="content"><img src="https://lh3.googleusercontent.com/hiMbw0htjRtRhPqOIuc5AwUQm-oz3fQiL4hDRMJ8IJGcr4GOGgyiBTOAO_DxsbMJETBEnaXp5TQ6wgfCYQpQKIKw4rRQ4DTakgKPdQiZgaPhuTk1MC0m-G7jxukY9UQUiFId5kWXwg=w2400" height="200" width="200">
+
+						</br> Spelling Bee is a game in which you are given seven letters and you must match as many words as you can </br>with the seven letters provided. This project was made using Scheme/Racket on the Software DrRacket.</br> <a style="color: black;" href="https://github.com/stringlady/Maze" target="_blank"> Project Link</a></div>
+					</div>
+					<hr>
+
+				</div>
+			</div>
+
+			
+
+			
+<!--
+			<div id= "qt">
+
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+
+				<img src="https://lh3.googleusercontent.com/oI1R3wyJUZOhvMNYT04mszPWyQfQK7YGADKURN0zjxWkqI8034mFKdnpB1P_PRk3pV4jVyiR-1VffOCeA8tabE3mhMimhBtG9mCOR8Yod4Io--RQUThUN8zDkfzsiSboMQSC9xScWQ=w2400" height="200" width="300">
+				<p style="text-align: left;font-family: sans-serif;font-size: 15px;">Quantum Teleportation is a Jupyter </br>Notebook used to help teleport qubits </br> using the Quantum and Classical Registers. </br> This project was made using Python </br>and the library Qiskit.</br> <a style="color: black;" href="hhttps://github.com/stringlady/Quantum-Teleportation" target="_blank"> Project Link</a></p>
+			</div>
+
+			<div id= "bee">
+
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+
+				<img src="https://lh3.googleusercontent.com/hiMbw0htjRtRhPqOIuc5AwUQm-oz3fQiL4hDRMJ8IJGcr4GOGgyiBTOAO_DxsbMJETBEnaXp5TQ6wgfCYQpQKIKw4rRQ4DTakgKPdQiZgaPhuTk1MC0m-G7jxukY9UQUiFId5kWXwg=w2400" height="200" width="200">
+				<p style="text-align: right;font-family: sans-serif;font-size: 15px;">Spelling Bee is a game in which you are given </br> seven letters and you must match as many words </br> as you can with the seven letters provided. </br> This project was made using Scheme/Racket on the </br>Software DrRacket.</br> <a style="color: black;" href="https://github.com/stringlady/Maze" target="_blank"> Project Link</a></p>
+			</div>
+
+			<div id= "web">
+				
+				<p style="font-weight: bold; text-align: center">Orb of Power</p>
+		
+				<img src="https://lh3.googleusercontent.com/3s77_nxnpQozoWwllA1TnaEZFXKA_NkAUcROyK4Uf6Kv2NZjFtB4yyIsecC9LLGu1hK7QN3N5pnKSLDXMHnmiZCxwXk3tRLt9HiRIGx-L8HXcUVf5DT7ayWsQW8TQAUszhODMq8p6w=w2400" height="200" width="250">
+				<p style="text-align: center;"> Personal Website is a website </br> designed to inform the user about me, </br> my projects,resume, and </br> different experiences</br> This project was made </br> using HTML and CSS using the </br> Software Sublime Text </br> <a style="color: black;" href="https://github.com/stringlady/Maze" target="_blank"> Here is a link to the project</a></p>
+			</div>
+
+-->			
+
+		</section>
+
+		<section id="experience">
+
+			<div class="accordian-body">
+				<div class="accordian">
+					<h3 style= "font-weight: bold; font-family: sans-serif;">Experience</h3>
+				</br>
+					<hr>
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">IOS Development Academy</div>
+						<div class="content">
+						</br> As a Summer Academy student, I spent 8 intense weeks learning Swift, Objective-C, cocos2d and </br>Game Design/Development. At the end of the program, I shipped my first IOS game, Orb of Power </br>to the App Store.</p>
+				<a style="font-size: x-large; color: black;" href="https://lh3.googleusercontent.com/oYlniN2PUgsI8psor97PWkY1S_3sU8a5Ov6ltkPRvS4VFBvs49XiZs1bYWER9gM34K2XYjmnptyJoLv9uturf22GmyCvHZ4j5g-VHT1Q0Ma5qhF16tEJh6BtYVlGhueHvYreNv3hDA=w2400" target="_blank">Certificate</a></div>
+					</div>
+					<hr>
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Computer Science for Cyber Security</div>
+						<div class="content">
+
+						</br> A 4-week full-day summer program that provided an introduction on the fundamentals of cybersecurity </br>and computer science. I also learned various topics including digital forensics, steganography, </br>white-hat hacking, and cryptography, all by performing direct code.</p>
+				<a style="font-size: x-large; color: black; " href="https://lh3.googleusercontent.com/tEA3QViK0nKOtZeXrZKZSMDnamW2osM0fjkRsn9IX6sJ0MKpzaxegAdvVZRseRV-6urKUddbJE-Ml5ewuHe48G9lHFZjR-1OPjELVkv9dCx8803hZqN70JwNEifWW-L09wu3DwIxyw=w2400" target="_blank">Certificate</a></div>
+					</div>
+					<hr>
+
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">AI4ALL</div>
+						<div class="content">
+						</br> Utilizing Python, I learned the fundamentals of AI technology through lessons and using the code </br>firsthand. Also, I worked with a lot of data, specifically concentrating on the ability to detect biases </br>and finding ways to fix those biases in the data structures to prevent harm to future projects that </br>incorporate those databases.</p>
+				<a style="font-size: x-large; color: black;" href="https://lh3.googleusercontent.com/Ye4adTlrPPnvcjf9kSo9tDVCe7kzb9wRHCkFo9uUjrTU7KW82T2oHh3dc9Wjqh79W7nMkbHYue4W8TTGCKGo9RWJpjA-JHQ4vlrr_SH9ghJ5IqmMEBjKUsJtu1Jt5EUS0P3cjOWu7w=w2400" target="_blank">Certificate</a></br>
+				<a style="font-size: x-large; color: black;" href="https://drive.google.com/file/d/19ofzGI8tP7e6lnaQghm78KQSi7dngQ3v/view" target="_blank">Slideshow </a></div>
+					</div>
+					<hr>
+
+					<div class="container">
+						<div class="label" style="font-weight: bold;font-size: xx-large;">Applied Research Innovations in Science and Engineering</div>
+						<div class="content">
+
+						</br> This seven-week program offers engaging, hands-on lab experiences. I was introduced to scientific </br>ethics, contemporary issues in scientific inquiry, data collection and analysis, research practices, lab </br>safety, and many more. I explored vital topics of cybersecurity, wireless technologies, smart cities, </br>biomedical engineering, and sustainability.</p>
+				<a style="font-size: x-large; color: black;" href="https://lh3.googleusercontent.com/nY8Lyf1qw29vFPFOR4pdn7gntrfFALIe3w0YRdU19zTwbNtiAH6lVuJP6KhpKZwe94c94jdwxioEHb4EakYO_OSsGGnWJw0ftDNKDu77ZJdR_OBVOFm-hRCkPRIp7y4uS9IPcpexNQ=w2400" target="_blank">Certificate</a>
+			</br>
+				<a style="font-size: x-large; color: black;" href="https://lh3.googleusercontent.com/udaqyrF-K7J1slio_1b8buJc-ZKj8awBIPr6LMiyx9g3cn2EeaG1DN2T-LsPVA7u850ntJqYgBBYYAqEFMZZw4aIc1PUbuQ5NVD-YEo17zOZe45PIfYa7Ut7TV2azZgfhFobTuG4aA=w2400" target="_blank">Slideshow </a></div>
+					</div>
+					<hr>
+
+				</div>
+			</div>
+			
+		</section>
+
+<!--
+			<h3 style= "font-weight: bold; font-family: sans-serif;">Experience</h3>
+
+		<div id="make">
+				<p style="font-weight: bold; font-family: sans-serif;">IOS Development Academy:</p>
+				<p style="font-family: sans-serif; margin-left: 400px; margin-right: 400px;">As a Summer Academy student, I spent 8 intense weeks learning Swift, Objective-C, cocos2d and Game Design/Development. At the end of the program, I shipped my first IOS game, Orb of Power to the App Store.</p>
+				<a style="font-size: x-large; color: black;" href="https://lh3.googleusercontent.com/oYlniN2PUgsI8psor97PWkY1S_3sU8a5Ov6ltkPRvS4VFBvs49XiZs1bYWER9gM34K2XYjmnptyJoLv9uturf22GmyCvHZ4j5g-VHT1Q0Ma5qhF16tEJh6BtYVlGhueHvYreNv3hDA=w2400" target="_blank">Certificate</a>
+			</div>
+
+		<div id="cs4cs">
+				<p style="font-weight: bold; font-family: sans-serif;">Computer Science for Cyber Security:</p>
+				<p style="font-family: sans-serif; margin-left: 400px; margin-right: 400px;">A 4-week full-day summer program that provided an introduction on the fundamentals of cybersecurity and computer science. I also learned various topics including digital forensics, steganography, white-hat hacking, and cryptography, all by performing direct code.</p>
+				<a style="font-size: x-large; color: black; margin-left: 657px; margin-right: 700px;" href="https://lh3.googleusercontent.com/tEA3QViK0nKOtZeXrZKZSMDnamW2osM0fjkRsn9IX6sJ0MKpzaxegAdvVZRseRV-6urKUddbJE-Ml5ewuHe48G9lHFZjR-1OPjELVkv9dCx8803hZqN70JwNEifWW-L09wu3DwIxyw=w2400" target="_blank">Certificate</a>
+			</div>
+
+		<div id="ai">
+				<p style="font-weight: bold; font-family: sans-serif;">AI4ALL:</p>
+				<p style="font-family: sans-serif; margin-left: 400px; margin-right: 400px;">Utilizing Python, I learned the fundamentals of AI technology through lessons and using the code firsthand. Also, I worked with a lot of data, specifically concentrating on the ability to detect biases and finding ways to fix those biases in the data structures to prevent harm to future projects that incorporate those databases.</p>
+				<a style="font-size: x-large; color: black; margin-left: 657px; margin-right: 700px;" href="https://lh3.googleusercontent.com/Ye4adTlrPPnvcjf9kSo9tDVCe7kzb9wRHCkFo9uUjrTU7KW82T2oHh3dc9Wjqh79W7nMkbHYue4W8TTGCKGo9RWJpjA-JHQ4vlrr_SH9ghJ5IqmMEBjKUsJtu1Jt5EUS0P3cjOWu7w=w2400" target="_blank">Certificate</a>
+				<a style="font-size: x-large; color: black; margin-left: 657px; margin-right: 700px;" href="https://drive.google.com/file/d/19ofzGI8tP7e6lnaQghm78KQSi7dngQ3v/view" target="_blank">Slideshow </a>
+			</div>
+
+		<div id="arise">
+				<p style="font-weight: bold; font-family: sans-serif;">Applied Research Innovations in Science and Engineering:</p>
+				<p style="font-family: sans-serif; margin-left: 400px; margin-right: 400px;">This seven-week program offers engaging, hands-on lab experiences. I was introduced to scientific ethics, contemporary issues in scientific inquiry, data collection and analysis, research practices, lab safety, and many more. I explored vital topics of cybersecurity, wireless technologies, smart cities, biomedical engineering, and sustainability.</p>
+				<a style="font-size: x-large; color: black; margin-left: 657px; margin-right: 700px;" href="https://lh3.googleusercontent.com/nY8Lyf1qw29vFPFOR4pdn7gntrfFALIe3w0YRdU19zTwbNtiAH6lVuJP6KhpKZwe94c94jdwxioEHb4EakYO_OSsGGnWJw0ftDNKDu77ZJdR_OBVOFm-hRCkPRIp7y4uS9IPcpexNQ=w2400" target="_blank">Certificate</a>
+				<a style="font-size: x-large; color: black; margin-left: 657px; margin-right: 700px;" href="https://lh3.googleusercontent.com/udaqyrF-K7J1slio_1b8buJc-ZKj8awBIPr6LMiyx9g3cn2EeaG1DN2T-LsPVA7u850ntJqYgBBYYAqEFMZZw4aIc1PUbuQ5NVD-YEo17zOZe45PIfYa7Ut7TV2azZgfhFobTuG4aA=w2400" target="_blank">Slideshow </a>
+		</div>
+
+			
+		</section>
+-->
+		<div id="all">
+		<div id="linkedin">
+			<a href="https://www.linkedin.com/in/busseyanaya/" target = "_blank"> <img src="https://lh3.googleusercontent.com/mhnCxPRHVuv4d-jbq-iMHRd2p-joIvfnm1PDrypSnXrtV6a9dd_XADzP19nLVu8Hjy2CUQdhWuitBkNf8TH5EFDw-A2f0eZRisskpjU-2ecYJzyeMgKm2jCfSh_6PnNaxBcsL3UcLQ=w512-h315-p-k" height = "45" width = "40"/> </a>
+		</div>
+
+		<div id="github">
+			<a href="https://github.com/stringlady" target = "_blank"> <img src="https://lh3.googleusercontent.com/9hinwyc5o1kvcBS0nIRw1RqVcuhnsPwMUXap4o0R92qQkgKG8dzr_cSqJqKguGFjQqR1c8PgFyaQZG1hUGgNXId6bXW2f7NihQE8kY2qeKQStR3HbFqE-KqiQeNGS3Tys8CzdfCU0Q=w512-h315-p-k" height = "50" width = "40"/> </a>
+			</div>
+		</div>
+
+<!--
+	<script>
+		const accordion = document.getElementsByClassName('container');
+
+for (i=0; i<accordion.length; i++) {
+  accordion[i].addEventListener('click', function () {
+    this.classList.toggle('active')
+  })
+}
+</script>
+-->
+
+	</body>
 </html>
-
-
